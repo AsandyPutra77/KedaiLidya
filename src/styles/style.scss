@@ -1,0 +1,702 @@
+$base-color: rgb(36, 80, 122);
+$text-color: white;
+$focus-color: #3f4cc2;
+
+$header-text: "Slackey", cursive;
+$title-text: "Moonlit Melody", recursive;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $base-color;
+  color: $text-color;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  .hero {
+    background-image: url("../public/images/heros/hero-image_2.jpg");
+    background-position: center;
+
+    .hero_inner {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+      .hero_title,
+      .hero_menu {
+        margin: 5%;
+        font-family: $header-text;
+        color: $text-color;
+        -webkit-text-stroke: 1px black;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      .hero_title {
+        display: inline-block;
+      }
+
+      .hero_menu {
+        display: block;
+        font-size: 32px;
+        border: none;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+      }
+
+      button:focus {
+        outline: 4px $focus-color;
+      }
+    }
+    .nav {
+      width: 100%;
+      text-align: center;
+      background-color: #2c3e50;
+      padding: 20px 0;
+    }
+    
+    .nav_list {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    
+    .nav_item {
+      box-sizing: border-box;
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      line-height: 1;
+      margin: 0 10px;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+    }
+
+    .nav_item:last-child {
+      border-right: none;
+    }
+    
+    .nav_item a {
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 32px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav_item a:hover {
+      background-color: #34495e;
+    }
+    
+  }
+}
+
+main {
+  .section_main {
+    text-align: center;
+    margin: 10px;
+
+    h2 {
+      font-size: 24px;
+      font-family: $title-text;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .section_details {
+    margin: auto;
+  }
+
+  .section_sort {
+    font-size: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-bottom: 1px solid black;
+
+    button {
+      font-size: 12px;
+      border: none;
+      background-color: transparent;
+
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    button:focus {
+      outline: 4px $focus-color;
+    }
+  }
+
+  .section_container {
+    display: grid;
+    row-gap: 16px;
+    justify-items: center;
+    min-height: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.10); 
+  }
+
+  .item_details {
+    margin-left: 12px;
+    margin-right: 12px;
+    display: grid;
+    gap: 5px;
+    background-color: rgb(159, 221, 221);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 16px;
+
+    img,
+    h3 {
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      padding-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); 
+    }
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    span {
+      font-weight: bold;
+      display: flex-end;
+      margin-left: 12px;
+      color: rgb(252, 78, 34);
+    }
+
+    button {
+      width: 100%;
+      min-height: 44px;
+      display: flex-end;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+      background-color: $base-color;
+      color: $text-color;
+      transition: box-shadow 0.3s ease; /* Efek transisi untuk bayangan tombol */
+    }
+    
+    button:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mengubah bayangan saat tombol dihover */
+      transform: translateY(-2px); /* Efek mengangkat tombol sedikit */
+    }
+
+    button:active {
+      background-color: #6b8e23;
+    }
+
+    button:focus {
+      outline: 4px dashed $focus-color;
+    }
+  }
+
+
+  .restaurant_info {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+   /* Style untuk input dan textarea */
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 3%;
+  padding: 12px; /* Menambahkan sedikit padding */
+  border-radius: 8px; /* Memperbesar radius sudut */
+  border: 1px solid #ccc; /* Menambahkan border dengan warna abu-abu muda */
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 16px; /* Menyesuaikan ukuran font */
+  color: #333; /* Warna teks */
+  background-color: #f9f9f9; /* Warna latar belakang */
+  transition: all 150ms linear;
+}
+
+/* Style untuk saat fokus */
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1); /* Efek bayangan saat fokus */
+}
+
+    textarea {
+      resize: none;
+      height: 80px;
+      width: 100%;
+    }
+
+    img,
+    h3 {
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      padding-bottom: 12px;
+      border-radius: 8px;
+    }
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    span {
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    li {
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 8px;
+      margin-bottom: 7%;
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+
+  .reviewer_container {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 16px;
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+  }
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    z-index: 10;
+    background-color: $base-color;
+    width: 300px;
+    position: absolute;
+
+    -webkit-transform: translate(-1000px, 0);
+    transform: translate(-1000px, 0);
+
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav_item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav a {
+    font-size: 8px;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .hero_inner {
+      font-size: 40px;
+      #menu {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    .section_main {
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .section_sort {
+      font-size: 16px;
+      padding: 10px; 
+      
+      button {
+        font-size: 16px;
+        cursor: pointer;
+        background-color: rgb(92, 122, 156); 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        padding: 10px 20px; 
+        transition: background-color 0.3s ease; 
+      }
+    
+     
+      button:hover {
+        background-color: #728d94;
+         
+      }
+    
+      
+      button:active {
+        background-color: #f7f7f7; 
+      }
+    }
+
+    .section_container {
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 0 2px 8px rgb(140, 221, 217);
+
+    }
+
+    .item_details {
+      min-height: 700px;
+      grid-template-rows: auto auto 1fr auto;
+      img {
+        max-height: 220px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      span,
+      button {
+        align-self: end;
+        
+      }
+
+      span {
+        font-size: 16px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 7px;
+        margin-bottom: 32px;
+      }
+    }
+
+    .restaurant_info {
+      padding: 24px;
+
+      h3 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      label {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 18px;
+      }
+    }
+
+    .reviewer_container {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    .hero_inner {
+      font-size: 50px;
+    }
+    .nav a {
+      font-size: 20px;
+      padding: 5px;
+    }
+  }
+  main {
+    .section_main {
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .section_sort {
+      font-size: 16px;
+
+      button {
+        font-size: 16px;
+      }
+    }
+
+    .section_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item_details {
+      min-height: 900px;
+      display: grid;
+
+      img {
+        max-height: 180px;
+      }
+      h3 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .restaurant_info {
+      padding: 30px;
+
+      input {
+        height: 50px;
+        font-size: 24px;
+      }
+
+      textarea {
+        height: 160px;
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 38px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+      span {
+        font-size: 24px;
+      }
+
+      label {
+        font-size: 24px;
+      }
+
+      li {
+        font-size: 24px;
+      }
+
+      button {
+        font-size: 24px;
+      }
+    }
+
+    .reviewer_container {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    .hero_inner {
+      font-size: 60px;
+    }
+    .nav a {
+      font-size: 24px;
+      padding: 5px;
+    }
+  }
+  main {
+    .section_main {
+      h2 {
+        font-size: 60px;
+      }
+
+      p {
+        font-size: 28px;
+      }
+    }
+
+    .section_sort {
+      font-size: 28px;
+
+      button {
+        font-size: 28px;
+      }
+    }
+
+    .section_container {
+      margin: 0 auto;
+      max-width: 1600px;
+    }
+    .item_details {
+      min-height: 1500px;
+
+      img {
+        min-height: 380px;
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 24px;
+      }
+
+      button {
+        font-size: 24px;
+        padding: 12px;
+        border-radius: 14px;
+      }
+    }
+
+    .restaurant_info {
+      padding: 48px;
+
+      h3 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 32px;
+      }
+
+      span {
+        font-size: 32px;
+      }
+
+      label {
+        font-size: 32px;
+      }
+
+      li {
+        font-size: 32px;
+      }
+    }
+
+    .reviewer_container {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
