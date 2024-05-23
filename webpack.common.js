@@ -63,6 +63,7 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
       openAnalyzer: false,
     }),
 
