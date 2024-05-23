@@ -62,7 +62,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
 
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
 
     new MiniCssExtractPlugin({
       filename: '[name].css',
