@@ -520,7 +520,7 @@ textarea:focus-visible {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
   header {
 
@@ -633,7 +633,7 @@ textarea:focus-visible {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   header {
     .hero {
       background-image:url("../public/images/heros/hero-image_2-large.jpg");
