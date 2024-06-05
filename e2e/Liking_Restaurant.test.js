@@ -74,9 +74,9 @@ Scenario('Sorting restaurants name', async ({ I }) => {
   );
 });
 
-function isSortedAscending(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < arr[i - 1]) {
+function isSortedAscending(array) {
+  for(let i = 0; i < array.length - 1; i++) {
+    if(array[i] > array[i + 1]) {
       return false;
     }
   }

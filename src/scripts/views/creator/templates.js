@@ -1,7 +1,10 @@
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 const createRestaurantItemTemplate = (item) => `
 <div id=${item.id} class="restaurant_item">
 <div class="item_details">
-      <img src="https://restaurant-api.dicoding.dev/images/small/${item.pictureId}" alt="${item.name}">
+      <img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/small/${item.pictureId}" alt="${item.name}">
       <h3 class="restaurant_name">${item.name || '-'}</h3>
       <p>${item.description}</p>
       <span>City: ${item.city}</span>
@@ -65,7 +68,7 @@ const createMenuTemplate = (menus) => {
 
 const createDetailTemplate = (restaurant) => `
 <div class="restaurant_info">
-<img class="lazyload" src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name}">
+<img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name}">
     
     <h3>${restaurant.name}</h3>
             <p>${restaurant.description}</p>
