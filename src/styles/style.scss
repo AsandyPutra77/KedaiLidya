@@ -356,7 +356,18 @@ textarea:focus-visible {
   animation: spin 1s linear infinite;
 }
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 650px) {
+  header {
+    .hero {
+      background-image:url("../public/images/heros/hero-image_2-small.jpg");
+      background-position: center;
+    }
+
+    .hero_inner {
+      font-size: 30px;
+    }
+  }
+
   .nav {
     z-index: 10;
     background-color: $base-color;
@@ -387,8 +398,14 @@ textarea:focus-visible {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 651px) {
+
   header {
+    .hero {
+      background-image:url("../public/images/heros/hero-image_2-large.jpg");
+      background-position: center;
+    }
+
     .hero_inner {
       font-size: 40px;
       #menu {
@@ -504,7 +521,14 @@ textarea:focus-visible {
 }
 
 @media screen and (min-width: 1024px) {
+
   header {
+
+    .hero {
+      background-image:url("../public/images/heros/hero-image_2-small.jpg");
+      background-position: center;
+    }
+
     .hero_inner {
       font-size: 50px;
     }
@@ -610,6 +634,13 @@ textarea:focus-visible {
 }
 
 @media screen and (min-width: 1200px) {
+  header {
+    .hero {
+      background-image:url("../public/images/heros/hero-image_2-large.jpg");
+      background-position: center;
+    }
+  }
+  
   header {
     .hero_inner {
       font-size: 60px;
